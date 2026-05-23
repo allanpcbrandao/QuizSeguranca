@@ -207,107 +207,117 @@ const questions = {
         }
     ],
     empresa: [
-        {
-            question: "O que você deve fazer ao sair da sua mesa por um período prolongado?",
-            options: [
-                "Deixar o monitor ligado e a mesa arrumada",
-                "Bloquear a tela do computador (Ex: Win+L)",
-                "Desligar o computador da tomada",
-                "Avisar todos no andar que você saiu"
-            ],
-            correct: 1
-        },
-        {
-            question: "Qual a atitude correta ao receber um e-mail suspeito pedindo sua senha corporativa?",
-            options: [
-                "Responder com uma senha falsa para testar",
-                "Clicar no link para investigar a origem",
-                "Encaminhar para todos os colegas avisando",
-                "Não clicar em nada e reportar à equipe de TI"
-            ],
-            correct: 3
-        },
-        {
-            question: "Como evitar lesões por esforço repetitivo (LER) no trabalho de escritório?",
-            options: [
-                "Trabalhar 8 horas seguidas sem pausas para terminar logo",
-                "Fazer pausas regulares e manter a postura correta na cadeira",
-                "Digitar o mais rápido possível para cansar menos",
-                "Trabalhar deitado no sofá"
-            ],
-            correct: 1
-        },
-        {
-            question: "O que não se deve fazer com senhas corporativas?",
-            options: [
-                "Anotar em post-its colados no monitor ou teclado",
-                "Usar gerenciadores de senha aprovados pela empresa",
-                "Memorizá-las e não compartilhar",
-                "Criar senhas longas misturando letras e números"
-            ],
-            correct: 0
-        },
-        {
-            question: "Ao derramar líquido perto de cabos e tomadas no escritório, qual a primeira ação?",
-            options: [
-                "Limpar imediatamente com um pano bem molhado",
-                "Soprar para secar mais rápido",
-                "Avisar a manutenção e não tocar nos equipamentos molhados",
-                "Jogar os cabos no lixo"
-            ],
-            correct: 2
-        },
-        {
-            question: "O que fazer se o alarme de incêndio do prédio tocar durante o expediente?",
-            options: [
-                "Usar as escadas para evacuar o prédio de forma ordenada",
-                "Usar o elevador para descer mais rápido",
-                "Ficar na mesa terminando de enviar um e-mail importante",
-                "Procurar a origem do fogo para tirar fotos"
-            ],
-            correct: 0
-        },
-        {
-            question: "Para a segurança da informação, como devem ser descartados documentos impressos confidenciais?",
-            options: [
-                "Amassar e jogar no cesto de lixo comum",
-                "Levar para casa para jogar no lixo da rua",
-                "Deixar em cima da mesa para o pessoal da limpeza jogar fora",
-                "Triturados em máquinas específicas antes de ir para o lixo"
-            ],
-            correct: 3
-        },
-        {
-            question: "Ao encontrar um visitante sem crachá circulando sozinho no andar, o que fazer?",
-            options: [
-                "Ignorar, pois não é problema seu",
-                "Segui-lo escondido para ver o que ele faz",
-                "Abordá-lo educadamente e direcioná-lo à recepção",
-                "Gritar por segurança"
-            ],
-            correct: 2
-        },
-        {
-            question: "Qual é a posição ergonômica correta do monitor do computador?",
-            options: [
-                "Bem abaixo da linha dos olhos",
-                "Na altura dos olhos, a uma distância de aproximadamente um braço",
-                "De lado, forçando você a virar o pescoço",
-                "Muito perto do rosto para enxergar melhor"
-            ],
-            correct: 1
-        },
-        {
-            question: "Por que é importante manter as gavetas dos arquivos fechadas após o uso?",
-            options: [
-                "Para evitar que as pessoas tropecem ou se machuquem ao passar",
-                "Para esconder os documentos bagunçados",
-                "Para não deixar o ar condicionado entrar nas gavetas",
-                "Porque é uma regra sem motivo aparente"
-            ],
-            correct: 0
-        }
-    ]
+    // RISCO DE ACIDENTES
+    {
+        question: "O que fazer se o alarme de incêndio do prédio tocar durante o expediente?",
+        options: [
+            "Usar as escadas para evacuar o prédio de forma ordenada",
+            "Usar o elevador para descer mais rápido",
+            "Ficar na mesa terminando de enviar um e-mail importante",
+            "Procurar a origem do fogo para tirar fotos"
+        ],
+        correct: 0
+    },
+    // RISCO ERGONÔMICO
+    {
+        question: "Qual é a posição ergonômica correta do monitor do computador?",
+        options: [
+            "Bem abaixo da linha dos olhos",
+            "Na altura dos olhos, a uma distância de aproximadamente um braço",
+            "De lado, forçando você a virar o pescoço",
+            "Muito perto do rosto para enxergar melhor"
+        ],
+        correct: 1
+    },
+    // RISCO FÍSICO (elétrico)
+    {
+        question: "Ao derramar líquido perto de cabos e tomadas no escritório, qual a primeira ação?",
+        options: [
+            "Limpar imediatamente com um pano bem molhado",
+            "Soprar para secar mais rápido",
+            "Avisar a manutenção e não tocar nos equipamentos molhados",
+            "Jogar os cabos no lixo"
+        ],
+        correct: 2
+    },
+    // RISCO ERGONÔMICO
+    {
+        question: "Como evitar lesões por esforço repetitivo (LER) no trabalho de escritório?",
+        options: [
+            "Trabalhar 8 horas seguidas sem pausas para terminar logo",
+            "Fazer pausas regulares e manter a postura correta na cadeira",
+            "Digitar o mais rápido possível para cansar menos",
+            "Trabalhar deitado no sofá"
+        ],
+        correct: 1
+    },
+    // RISCO QUÍMICO
+    {
+        question: "Qual cuidado deve ser tomado ao usar produtos de limpeza no ambiente de trabalho?",
+        options: [
+            "Misturar produtos diferentes para limpar mais rápido",
+            "Usar em ambientes fechados para o cheiro não incomodar os outros andares",
+            "Ler o rótulo, usar em local ventilado e nunca misturar produtos",
+            "Guardar os produtos em garrafas de água para facilitar o transporte"
+        ],
+        correct: 2
+    },
+    // RISCO BIOLÓGICO
+    {
+        question: "Um colega apresenta sintomas de gripe no escritório. Qual a atitude correta?",
+        options: [
+            "Ignorar, pois gripe não é perigosa em ambiente fechado",
+            "Compartilhar os mesmos utensílios normalmente",
+            "Orientar o colega a procurar o serviço médico e higienizar as mãos com frequência",
+            "Ventilação do ambiente não interfere na transmissão de doenças"
+        ],
+        correct: 2
+    },
+    // RISCO FÍSICO (ruído/iluminação)
+    {
+        question: "A iluminação insuficiente no posto de trabalho pode causar qual problema de saúde?",
+        options: [
+            "Nenhum, desde que o monitor esteja brilhante",
+            "Apenas dores de cabeça ocasionais sem consequências",
+            "Fadiga visual, dores de cabeça e queda de produtividade",
+            "Somente prejudica trabalhadores mais velhos"
+        ],
+        correct: 2
+    },
+    // RISCO DE ACIDENTES
+    {
+        question: "Por que fios e cabos não devem ficar soltos pelo chão do escritório?",
+        options: [
+            "Apenas por questão de organização visual",
+            "Porque podem causar tropeços, quedas e acidentes graves",
+            "Para facilitar a limpeza do chão",
+            "Porque a norma exige, mas não há risco real"
+        ],
+        correct: 1
+    },
+    // RISCO ERGONÔMICO
+    {
+        question: "Qual é a altura correta para ajustar a cadeira de escritório?",
+        options: [
+            "A mais alta possível para ter visão do ambiente",
+            "A mais baixa para apoiar melhor os pés no chão",
+            "Com os joelhos em ângulo de 90° e os pés apoiados no chão ou descanso",
+            "Não importa a altura, desde que seja confortável no momento"
+        ],
+        correct: 2
+    },
+    // RISCO QUÍMICO
+    {
+        question: "Impressoras a laser e fotocopiadoras podem emitir qual substância prejudicial à saúde em ambientes mal ventilados?",
+        options: [
+            "Gás carbônico em quantidade letal",
+            "Partículas de toner e ozônio, que irritam as vias respiratórias",
+            "Vapor d'água quente",
+            "Nenhuma substância, pois são equipamentos homologados"
+        ],
+        correct: 1
+    }
+]
 };
 
 /**
