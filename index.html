@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Segurança</title>
+    <!-- Fonte do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Folha de Estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+        <!-- =========================================
+             TELA 1: SELEÇÃO DE CATEGORIA
+             ========================================= -->
+        <section id="screen-selection" class="screen active">
+            <div class="header-titles">
+                <h1>Quiz de Segurança</h1>
+                <p>Escolha o ambiente para começar</p>
+            </div>
+            
+            <div class="category-cards">
+                <!-- Card Escola -->
+                <div class="card escola" onclick="startQuiz('escola')">
+                    <div class="card-icon">🏫</div>
+                    <h2>Escola</h2>
+                    <p>Segurança no ambiente escolar</p>
+                </div>
+                
+                <!-- Card Fábrica -->
+                <div class="card fabrica" onclick="startQuiz('fabrica')">
+                    <div class="card-icon">🏭</div>
+                    <h2>Fábrica</h2>
+                    <p>Segurança industrial e operacional</p>
+                </div>
+                
+                <!-- Card Empresa -->
+                <div class="card empresa" onclick="startQuiz('empresa')">
+                    <div class="card-icon">🏢</div>
+                    <h2>Empresa</h2>
+                    <p>Segurança no ambiente corporativo</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- =========================================
+             TELA 2: QUIZ
+             ========================================= -->
+        <section id="screen-quiz" class="screen">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <span id="cat-badge" class="category-badge">Categoria</span>
+                    <span id="progress-text" class="progress-text">1/10</span>
+                </div>
+                
+                <div class="progress-bar-container">
+                    <div id="progress-bar-fill" class="progress-bar"></div>
+                </div>
+
+                <h2 id="question-text" class="question-text">Pergunta?</h2>
+                
+                <div id="options-container" class="options-container">
+                    <!-- Opções geradas dinamicamente via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             TELA 3: RESULTADO
+             ========================================= -->
+        <section id="screen-result" class="screen">
+            <div class="result-container">
+                <div id="score-circle" class="score-circle">0/10</div>
+                
+                <div class="result-message">
+                    <h2 id="score-text">Você acertou X de 10 perguntas!</h2>
+                    <p id="result-message-text">Mensagem motivacional.</p>
+                </div>
+
+                <div class="result-buttons">
+                    <button id="btn-restart" class="btn btn-primary" onclick="restartQuiz()">
+                        🔄 Jogar Novamente
+                    </button>
+                    <button class="btn btn-secondary" onclick="goHome()">
+                        🏠 Trocar Categoria
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
