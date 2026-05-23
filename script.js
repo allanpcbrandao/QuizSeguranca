@@ -8,18 +8,18 @@ const questions = {
             options: [
                 "Pular sobre ela",
                 "Ignorar e continuar andando",
-                "Avisar a limpeza e sinalizar o local",
+                "Avisar a limpeza ou algum funcionário da escola",
                 "Correr para não escorregar"
             ],
             correct: 2
         },
         {
-            question: "Qual é a principal função de um simulado de evacuação na escola?",
+            question: "Onde devem ser armazenados os produtos químicos em uma escola?",
             options: [
-                "Testar o alarme de incêndio",
-                "Preparar alunos e funcionários para emergências reais",
-                "Dispensar os alunos mais cedo",
-                "Punir quem não presta atenção"
+                "Em qualquer prateleira disponível na sala de aula",
+                "Em local ventilado, identificado e de acesso restrito aos alunos",
+                "Dentro da mochila do professor para maior controle",
+                "No banheiro da escola"
             ],
             correct: 1
         },
@@ -64,12 +64,12 @@ const questions = {
             correct: 0
         },
         {
-            question: "O que você deve fazer se encontrar um objeto estranho e sem dono no pátio?",
+            question: "Qual é a forma mais eficaz de prevenir a transmissão de doenças infecciosas no ambiente escolar?",
             options: [
-                "Abrir para ver o que é",
-                "Levar para casa",
-                "Não tocar e avisar um adulto responsável",
-                "Jogar no lixo imediatamente"
+                "Tomar vitaminas todos os dias",
+                "Evitar contato com qualquer colega",
+                "Lavar as mãos com água e sabão frequentemente",
+                "Usar luvas em todas as atividades escolares"
             ],
             correct: 2
         },
@@ -94,14 +94,14 @@ const questions = {
             correct: 1
         },
         {
-            question: "Se você ver alguém sofrendo bullying, qual é a atitude mais segura a tomar?",
+            question: "Por que não se deve compartilhar itens como garrafas d'água, talheres e lápis labial entre colegas na escola?",
             options: [
-                "Entrar na briga para defender",
-                "Gravar com o celular",
-                "Ignorar e ir embora",
-                "Procurar um professor ou coordenador para relatar o ocorrido"
+                "Porque é falta de educação emprestar objetos pessoais",
+                "Porque esses objetos podem transmitir vírus e bactérias pela saliva ou contato direto",
+                "Porque os objetos podem ser danificados",
+                "Porque o colégio proíbe por questões de higiene pessoal"
             ],
-            correct: 3
+            correct: 1
         }
     ],
     fabrica: [
