@@ -1,17 +1,20 @@
 /**
  * Banco de Questões (30 perguntas no total)
+ * Cada questão tem enunciado, 4 alternativas, o índice da correta
+ * e uma explicação mostrada ao usuário depois de responder.
  */
 const questions = {
     escola: [
         {
             question: "Ao notar uma poça de água no corredor, o que você deve fazer?",
             options: [
-                "Pular sobre ela",
+                "Passar rápido pela borda da poça",
                 "Ignorar e continuar andando",
                 "Avisar a limpeza ou algum funcionário da escola",
-                "Correr para não escorregar"
+                "Tentar secar com o próprio casaco e seguir"
             ],
-            correct: 2
+            correct: 2,
+            explanation: "Avise a limpeza ou um funcionário: eles podem sinalizar e secar o local. Passar pela poça, ignorar ou correr aumenta o risco de queda para você e para os outros."
         },
         {
             question: "Onde devem ser armazenados os produtos químicos em uma escola?",
@@ -21,7 +24,8 @@ const questions = {
                 "Dentro da mochila do professor para maior controle",
                 "No banheiro da escola"
             ],
-            correct: 1
+            correct: 1,
+            explanation: "Produtos químicos devem ficar em local ventilado, identificado e de acesso restrito, para evitar intoxicação, mistura indevida e contato dos alunos."
         },
         {
             question: "Como você deve carregar sua mochila para evitar problemas de coluna?",
@@ -31,37 +35,41 @@ const questions = {
                 "Carregando nas mãos",
                 "Usando as duas alças bem ajustadas nas costas"
             ],
-            correct: 3
+            correct: 3,
+            explanation: "Usar as duas alças bem ajustadas distribui o peso pelas costas e reduz a sobrecarga na coluna. Carregar o peso de um lado só pode causar dor e sobrecarga."
         },
         {
             question: "O que fazer se um colega se machucar durante o recreio?",
             options: [
                 "Dar um remédio por conta própria",
                 "Chamar um professor ou inspetor imediatamente",
-                "Fingir que não viu para não se envolver",
-                "Rir da situação"
+                "Esperar o colega melhorar sozinho",
+                "Mandar o colega levantar e andar para ver se dói"
             ],
-            correct: 1
+            correct: 1,
+            explanation: "Chame um adulto responsável imediatamente. Dar remédio por conta própria é perigoso, e ignorar a situação ou movimentar o colega pode agravar a lesão."
         },
         {
             question: "Qual é a forma correta de descer as escadas na escola?",
             options: [
-                "Correndo muito rápido",
+                "Descendo rápido para chegar antes da fila",
                 "Pulando de dois em dois degraus",
                 "Andando devagar e segurando no corrimão",
-                "Escorregando pelo corrimão"
+                "Descendo de costas para conversar com os colegas"
             ],
-            correct: 2
+            correct: 2,
+            explanation: "Descer devagar e segurando no corrimão evita escorregões e quedas."
         },
         {
             question: "Por que é importante não correr nos corredores?",
             options: [
                 "Para evitar colisões e quedas graves",
-                "Para não cansar rápido antes da aula",
-                "Para não fazer barulho",
-                "Não há problema algum em correr"
+                "Para não atrapalhar as aulas nas salas ao lado",
+                "Porque a regra é apenas uma questão de disciplina",
+                "Porque só é permitido correr no horário do recreio"
             ],
-            correct: 0
+            correct: 0,
+            explanation: "Correr nos corredores aumenta o risco de colisões e quedas, que podem causar ferimentos sérios."
         },
         {
             question: "Qual é a forma mais eficaz de prevenir a transmissão de doenças infecciosas no ambiente escolar?",
@@ -71,7 +79,8 @@ const questions = {
                 "Lavar as mãos com água e sabão frequentemente",
                 "Usar luvas em todas as atividades escolares"
             ],
-            correct: 2
+            correct: 2,
+            explanation: "Lavar as mãos com água e sabão com frequência é uma das formas mais eficazes de reduzir a transmissão de doenças infecciosas."
         },
         {
             question: "Em caso de incêndio, qual deve ser a sua atitude ao ouvir o alarme?",
@@ -81,7 +90,8 @@ const questions = {
                 "Manter a calma e seguir a rota de fuga orientada",
                 "Tentar apagar o fogo sozinho com água"
             ],
-            correct: 2
+            correct: 2,
+            explanation: "Mantenha a calma e siga a rota de fuga indicada. Correr sem direção, se esconder ou tentar apagar o fogo sozinho aumenta o perigo."
         },
         {
             question: "Por que não devemos balançar nas cadeiras da sala de aula?",
@@ -91,7 +101,8 @@ const questions = {
                 "Porque arranha o piso da escola",
                 "Para não incomodar o colega de trás"
             ],
-            correct: 1
+            correct: 1,
+            explanation: "A cadeira pode perder o equilíbrio e virar, e a queda pode causar ferimentos graves."
         },
         {
             question: "Por que não se deve compartilhar itens como garrafas d'água, talheres e lápis labial entre colegas na escola?",
@@ -101,7 +112,8 @@ const questions = {
                 "Porque os objetos podem ser danificados",
                 "Porque o colégio proíbe por questões de higiene pessoal"
             ],
-            correct: 1
+            correct: 1,
+            explanation: "Garrafas, talheres e outros itens de uso pessoal podem transmitir vírus e bactérias pela saliva e pelo contato direto."
         }
     ],
     fabrica: [
@@ -113,7 +125,8 @@ const questions = {
                 "Protetor auricular adequado",
                 "Tapa-orelhas de lã"
             ],
-            correct: 2
+            correct: 2,
+            explanation: "Em áreas ruidosas é preciso usar protetor auricular adequado. Fones de música, algodão ou tapa-orelhas de lã não protegem de forma adequada e ainda podem atrapalhar a percepção de alertas."
         },
         {
             question: "O que significa a cor vermelha na sinalização de segurança de uma fábrica?",
@@ -123,27 +136,30 @@ const questions = {
                 "Área totalmente segura",
                 "Obrigatoriedade do uso de EPI"
             ],
-            correct: 0
+            correct: 0,
+            explanation: "Na sinalização de segurança, o vermelho indica equipamentos de combate a incêndio. O alerta de atenção e risco é feito com a cor amarela, e a obrigação de usar EPI, com sinais azuis."
         },
         {
             question: "Antes de realizar a manutenção de uma máquina, qual procedimento é obrigatório?",
             options: [
                 "Avisar o colega do lado",
                 "Desligar a máquina e aplicar o bloqueio/etiquetagem (LOTO)",
-                "Limpar a máquina com água",
-                "Deixar a máquina ligada no modo mais fraco"
+                "Reduzir a velocidade da máquina",
+                "Usar luvas grossas e trabalhar com cuidado"
             ],
-            correct: 1
+            correct: 1,
+            explanation: "Antes da manutenção, a máquina deve ser desligada e ter a energia isolada com bloqueio e etiquetagem (LOTO), para evitar uma partida acidental."
         },
         {
             question: "Se você presenciar um vazamento de produto químico desconhecido, o que deve fazer?",
             options: [
                 "Tentar limpar usando um pano",
-                "Cheirar para descobrir o que é",
+                "Isolar o local com fita e continuar trabalhando ao lado",
                 "Jogar bastante água por cima",
                 "Evacuar a área imediatamente e acionar a emergência"
             ],
-            correct: 3
+            correct: 3,
+            explanation: "Diante de um produto químico desconhecido, evacue a área e acione a emergência. Não cheire, não toque e não tente limpar sem orientação, pois o produto pode ser tóxico."
         },
         {
             question: "Qual EPI é fundamental para proteger os pés contra queda de objetos pesados?",
@@ -153,47 +169,52 @@ const questions = {
                 "Sandália de borracha grossa",
                 "Bota de cano longo de tecido"
             ],
-            correct: 1
+            correct: 1,
+            explanation: "A bota de segurança com biqueira de aço ou composite protege os pés contra queda de objetos pesados. Calçados comuns não oferecem essa proteção."
         },
         {
             question: "Qual a postura correta para levantar uma caixa pesada do chão?",
             options: [
                 "Dobrar a coluna sem dobrar os joelhos",
                 "Dobrar os joelhos, manter a coluna reta e usar a força das pernas",
-                "Levantar a caixa com uma mão só",
-                "Puxar a caixa arrastando pelo chão"
+                "Girar o tronco enquanto levanta para ganhar tempo",
+                "Levantar rápido, com impulso, para usar menos força"
             ],
-            correct: 1
+            correct: 1,
+            explanation: "Dobre os joelhos, mantenha a coluna reta e use a força das pernas. Curvar só a coluna ou levantar com impulso sobrecarrega as costas."
         },
         {
             question: "O que você deve fazer se o seu EPI estiver danificado?",
             options: [
-                "Continuar usando até ele quebrar de vez",
+                "Continuar usando, pois ainda protege em parte",
                 "Tentar consertar com fita adesiva",
                 "Solicitar a troca imediata ao supervisor ou segurança",
                 "Trabalhar sem o EPI naquele dia"
             ],
-            correct: 2
+            correct: 2,
+            explanation: "EPI danificado não protege adequadamente. Solicite a troca imediata ao supervisor ou à segurança e não trabalhe sem proteção."
         },
         {
             question: "Qual a função dos óculos de segurança em um ambiente de usinagem?",
             options: [
                 "Melhorar a visão para detalhes",
-                "Proteger do sol que entra pela janela",
+                "Reduzir o cansaço visual no fim do turno",
                 "Proteger apenas contra poeira fina",
                 "Proteger os olhos contra projeção de partículas e fagulhas"
             ],
-            correct: 3
+            correct: 3,
+            explanation: "Os óculos de segurança protegem os olhos contra projeção de partículas e fagulhas, comuns em ambientes de usinagem."
         },
         {
             question: "Quando é permitido operar uma empilhadeira?",
             options: [
                 "Sempre que precisar transportar algo pesado",
                 "Apenas se você for treinado, certificado e autorizado",
-                "Se o operador oficial estiver de folga",
+                "Se o supervisor pedir com urgência",
                 "Se você souber dirigir carro comum"
             ],
-            correct: 1
+            correct: 1,
+            explanation: "Só opera empilhadeira quem foi treinado, certificado e autorizado. Saber dirigir carro, ou receber um pedido urgente, não habilita para esse equipamento."
         },
         {
             question: "O que significa um ambiente confinado na indústria?",
@@ -203,121 +224,122 @@ const questions = {
                 "O refeitório durante a hora do almoço",
                 "A sala de descanso dos funcionários"
             ],
-            correct: 1
+            correct: 1,
+            explanation: "Ambiente confinado é um espaço não projetado para ocupação humana contínua e com ventilação deficiente, o que pode causar falta de oxigênio ou acúmulo de gases. A entrada exige procedimentos específicos."
         }
     ],
     empresa: [
-    // RISCO DE ACIDENTES
-    {
-        question: "O que fazer se o alarme de incêndio do prédio tocar durante o expediente?",
-        options: [
-            "Usar as escadas para evacuar o prédio de forma ordenada",
-            "Usar o elevador para descer mais rápido",
-            "Ficar na mesa terminando de enviar um e-mail importante",
-            "Procurar a origem do fogo para tirar fotos"
-        ],
-        correct: 0
-    },
-    // RISCO ERGONÔMICO
-    {
-        question: "Qual é a posição ergonômica correta do monitor do computador?",
-        options: [
-            "Bem abaixo da linha dos olhos",
-            "Na altura dos olhos, a uma distância de aproximadamente um braço",
-            "De lado, forçando você a virar o pescoço",
-            "Muito perto do rosto para enxergar melhor"
-        ],
-        correct: 1
-    },
-    // RISCO FÍSICO (elétrico)
-    {
-        question: "Ao derramar líquido perto de cabos e tomadas no escritório, qual a primeira ação?",
-        options: [
-            "Limpar imediatamente com um pano bem molhado",
-            "Soprar para secar mais rápido",
-            "Avisar a manutenção e não tocar nos equipamentos molhados",
-            "Jogar os cabos no lixo"
-        ],
-        correct: 2
-    },
-    // RISCO ERGONÔMICO
-    {
-        question: "Como evitar lesões por esforço repetitivo (LER) no trabalho de escritório?",
-        options: [
-            "Trabalhar 8 horas seguidas sem pausas para terminar logo",
-            "Fazer pausas regulares e manter a postura correta na cadeira",
-            "Digitar o mais rápido possível para cansar menos",
-            "Trabalhar deitado no sofá"
-        ],
-        correct: 1
-    },
-    // RISCO QUÍMICO
-    {
-        question: "Qual cuidado deve ser tomado ao usar produtos de limpeza no ambiente de trabalho?",
-        options: [
-            "Misturar produtos diferentes para limpar mais rápido",
-            "Usar em ambientes fechados para o cheiro não incomodar os outros andares",
-            "Ler o rótulo, usar em local ventilado e nunca misturar produtos",
-            "Guardar os produtos em garrafas de água para facilitar o transporte"
-        ],
-        correct: 2
-    },
-    // RISCO BIOLÓGICO
-    {
-        question: "Um colega apresenta sintomas de gripe no escritório. Qual a atitude correta?",
-        options: [
-            "Ignorar, pois gripe não é perigosa em ambiente fechado",
-            "Compartilhar os mesmos utensílios normalmente",
-            "Orientar o colega a procurar o serviço médico e higienizar as mãos com frequência",
-            "Ventilação do ambiente não interfere na transmissão de doenças"
-        ],
-        correct: 2
-    },
-    // RISCO FÍSICO (ruído/iluminação)
-    {
-        question: "A iluminação insuficiente no posto de trabalho pode causar qual problema de saúde?",
-        options: [
-            "Nenhum, desde que o monitor esteja brilhante",
-            "Apenas dores de cabeça ocasionais sem consequências",
-            "Fadiga visual, dores de cabeça e queda de produtividade",
-            "Somente prejudica trabalhadores mais velhos"
-        ],
-        correct: 2
-    },
-    // RISCO DE ACIDENTES
-    {
-        question: "Por que fios e cabos não devem ficar soltos pelo chão do escritório?",
-        options: [
-            "Apenas por questão de organização visual",
-            "Porque podem causar tropeços, quedas e acidentes graves",
-            "Para facilitar a limpeza do chão",
-            "Porque a norma exige, mas não há risco real"
-        ],
-        correct: 1
-    },
-    // RISCO ERGONÔMICO
-    {
-        question: "Qual é a altura correta para ajustar a cadeira de escritório?",
-        options: [
-            "A mais alta possível para ter visão do ambiente",
-            "A mais baixa para apoiar melhor os pés no chão",
-            "Com os joelhos em ângulo de 90° e os pés apoiados no chão ou descanso",
-            "Não importa a altura, desde que seja confortável no momento"
-        ],
-        correct: 2
-    },
-    // RISCO QUÍMICO
-    {
-        question: "Impressoras a laser e fotocopiadoras podem emitir qual substância prejudicial à saúde em ambientes mal ventilados?",
-        options: [
-            "Gás carbônico em quantidade letal",
-            "Partículas de toner e ozônio, que irritam as vias respiratórias",
-            "Vapor d'água quente",
-            "Nenhuma substância, pois são equipamentos homologados"
-        ],
-        correct: 1
-    }
-]
+        {
+            question: "O que fazer se o alarme de incêndio do prédio tocar durante o expediente?",
+            options: [
+                "Usar as escadas para evacuar o prédio de forma ordenada",
+                "Voltar para pegar seus pertences antes de sair",
+                "Esperar na sala para ver se o alarme é falso",
+                "Usar o elevador para descer mais rápido"
+            ],
+            correct: 0,
+            explanation: "Em caso de alarme, evacue de forma ordenada pelas escadas. Não use o elevador, que pode parar por falta de energia ou ser atingido pela fumaça."
+        },
+        {
+            question: "Qual é a posição ergonômica correta do monitor do computador?",
+            options: [
+                "Bem abaixo da linha dos olhos",
+                "Na altura dos olhos, a uma distância de aproximadamente um braço",
+                "De lado, forçando você a virar o pescoço",
+                "Muito perto do rosto para enxergar melhor"
+            ],
+            correct: 1,
+            explanation: "O monitor deve ficar na altura dos olhos, a cerca de um braço de distância, para evitar flexão do pescoço e cansaço visual."
+        },
+        {
+            question: "Ao derramar líquido perto de cabos e tomadas no escritório, qual a primeira ação?",
+            options: [
+                "Limpar imediatamente com um pano bem molhado",
+                "Soprar para secar mais rápido",
+                "Avisar a manutenção e não tocar nos equipamentos molhados",
+                "Desligar da tomada com a mão úmida para proteger o equipamento"
+            ],
+            correct: 2,
+            explanation: "Líquido perto de cabos e tomadas pode causar choque elétrico e curto-circuito. Não toque nos equipamentos molhados e avise a manutenção."
+        },
+        {
+            question: "Como evitar lesões por esforço repetitivo (LER) no trabalho de escritório?",
+            options: [
+                "Trabalhar 8 horas seguidas sem pausas para terminar logo",
+                "Fazer pausas regulares e manter a postura correta na cadeira",
+                "Digitar o mais rápido possível para cansar menos",
+                "Apoiar os punhos dobrados sobre a mesa enquanto digita"
+            ],
+            correct: 1,
+            explanation: "Pausas regulares e postura correta ajudam a prevenir lesões por esforço repetitivo (LER). Longas jornadas sem pausa, ou punhos dobrados ao digitar, aumentam o risco."
+        },
+        {
+            question: "Qual cuidado deve ser tomado ao usar produtos de limpeza no ambiente de trabalho?",
+            options: [
+                "Misturar produtos diferentes para limpar mais rápido",
+                "Usar em ambientes fechados para o cheiro não incomodar os outros andares",
+                "Ler o rótulo, usar em local ventilado e nunca misturar produtos",
+                "Guardar os produtos em garrafas de água para facilitar o transporte"
+            ],
+            correct: 2,
+            explanation: "Leia o rótulo, use em local ventilado e nunca misture produtos, pois algumas misturas liberam gases tóxicos."
+        },
+        {
+            question: "Um colega apresenta sintomas de gripe no escritório. Qual a atitude correta?",
+            options: [
+                "Ignorar, pois gripe não é perigosa em ambiente fechado",
+                "Compartilhar os mesmos utensílios normalmente",
+                "Orientar o colega a procurar o serviço médico e higienizar as mãos com frequência",
+                "Manter o ambiente fechado para o colega não incomodar os outros"
+            ],
+            correct: 2,
+            explanation: "Oriente o colega a procurar atendimento médico e reforce a higiene das mãos. Ambientes fechados e mal ventilados favorecem a transmissão de doenças respiratórias."
+        },
+        {
+            question: "A iluminação insuficiente no posto de trabalho pode causar qual problema de saúde?",
+            options: [
+                "Nenhum, desde que o monitor esteja brilhante",
+                "Apenas dores de cabeça ocasionais sem consequências",
+                "Fadiga visual, dores de cabeça e queda de produtividade",
+                "Somente prejudica trabalhadores mais velhos"
+            ],
+            correct: 2,
+            explanation: "Iluminação insuficiente causa fadiga visual, dor de cabeça e queda de produtividade, em trabalhadores de qualquer idade."
+        },
+        {
+            question: "Por que fios e cabos não devem ficar soltos pelo chão do escritório?",
+            options: [
+                "Apenas por questão de organização visual",
+                "Porque podem causar tropeços, quedas e acidentes graves",
+                "Para facilitar a limpeza do chão",
+                "Porque a norma exige, mas não há risco real"
+            ],
+            correct: 1,
+            explanation: "Fios e cabos soltos no chão podem causar tropeços e quedas, inclusive com lesões graves."
+        },
+        {
+            question: "Qual é a altura correta para ajustar a cadeira de escritório?",
+            options: [
+                "A mais alta possível para ter visão do ambiente",
+                "A mais baixa para apoiar melhor os pés no chão",
+                "Com os joelhos em ângulo de 90° e os pés apoiados no chão ou descanso",
+                "Não importa a altura, desde que seja confortável no momento"
+            ],
+            correct: 2,
+            explanation: "Com os joelhos em ângulo de cerca de 90° e os pés apoiados, a postura e a circulação ficam melhores. Uma cadeira muito alta ou muito baixa gera sobrecarga."
+        },
+        {
+            question: "Impressoras a laser e fotocopiadoras podem emitir qual substância prejudicial à saúde em ambientes mal ventilados?",
+            options: [
+                "Gás carbônico em quantidade letal",
+                "Partículas de toner e ozônio, que irritam as vias respiratórias",
+                "Vapor d'água quente",
+                "Nenhuma substância, pois são equipamentos homologados"
+            ],
+            correct: 1,
+            explanation: "Impressoras a laser e copiadoras podem emitir partículas de toner e ozônio, que irritam as vias respiratórias em ambientes mal ventilados."
+        }
+    ]
 };
 
 /**
@@ -411,39 +433,61 @@ function loadQuestion() {
 }
 
 /**
- * Ação ao clicar em uma opção de resposta
+ * Ação ao clicar em uma opção de resposta:
+ * mostra se acertou, qual era a correta e a explicação, e espera o usuário clicar em "Próxima".
  */
 function selectOption(selectedIndex, btnElement) {
-    // Desabilita os botões para evitar múltiplos cliques
     const allButtons = document.querySelectorAll('.option-btn');
     allButtons.forEach(btn => btn.style.pointerEvents = 'none');
-    
-    // Estiliza o botão selecionado com as cores da categoria
-    btnElement.classList.add('selected');
-    btnElement.style.background = themeConfig[currentCategory].main;
-    
-    const letterSpan = btnElement.querySelector('.option-letter');
-    letterSpan.style.background = 'rgba(255,255,255,0.2)';
-    letterSpan.style.color = 'white';
-    
-    // Verifica pontuação
-    const correctIndex = selectedQuestions[currentQuestionIndex].correct;
-    if (selectedIndex === correctIndex) {
+
+    const q = selectedQuestions[currentQuestionIndex];
+    const correctIndex = q.correct;
+    const acertou = selectedIndex === correctIndex;
+    if (acertou) {
         score++;
     }
-    
-    // Avança após 0.8s para criar um efeito agradável de transição
-    setTimeout(() => {
-        currentQuestionIndex++;
-        
-        // Se foi a última pergunta, preenche a barra até 100% antes de ir pro resultado
-        if (currentQuestionIndex >= selectedQuestions.length) {
-            document.getElementById('progress-bar-fill').style.width = `100%`;
-            setTimeout(showResult, 400); // pequeno atraso para ver a barra cheia
+
+    // Marca a alternativa correta (verde) e, se errou, a escolhida (vermelho)
+    allButtons.forEach((btn, i) => {
+        if (i === correctIndex) {
+            btn.classList.add('correct');
+        } else if (i === selectedIndex) {
+            btn.classList.add('incorrect');
         } else {
-            loadQuestion();
+            btn.classList.add('dimmed');
         }
-    }, 800);
+    });
+
+    // Caixa de feedback com a explicação
+    const isLast = currentQuestionIndex === selectedQuestions.length - 1;
+    const feedback = document.createElement('div');
+    feedback.className = 'feedback ' + (acertou ? 'feedback-ok' : 'feedback-bad');
+    feedback.setAttribute('role', 'status');
+    feedback.innerHTML = `<strong>${acertou ? 'Resposta correta!' : 'Resposta incorreta.'}</strong> ${q.explanation}`;
+    document.getElementById('options-container').appendChild(feedback);
+
+    // Botão para avançar
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'btn btn-primary next-btn';
+    nextBtn.style.background = themeConfig[currentCategory].grad;
+    nextBtn.innerText = isLast ? 'Ver resultado' : 'Próxima pergunta →';
+    nextBtn.onclick = nextQuestion;
+    document.getElementById('options-container').appendChild(nextBtn);
+    nextBtn.focus();
+}
+
+/**
+ * Avança para a próxima pergunta (ou para o resultado, depois da última)
+ */
+function nextQuestion() {
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex >= selectedQuestions.length) {
+        document.getElementById('progress-bar-fill').style.width = '100%';
+        setTimeout(showResult, 400); // pequeno atraso para ver a barra cheia
+    } else {
+        loadQuestion();
+    }
 }
 
 /**
