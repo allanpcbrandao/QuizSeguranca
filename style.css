@@ -274,6 +274,57 @@ body {
     transition: all 0.2s;
 }
 
+
+/* =========================================
+   FEEDBACK APÓS A RESPOSTA (resposta correta + explicação)
+   ========================================= */
+.option-btn.correct {
+    background: #dcfce7;
+    border-color: #16a34a;
+    color: #14532d;
+}
+
+.option-btn.incorrect {
+    background: #fee2e2;
+    border-color: #dc2626;
+    color: #7f1d1d;
+}
+
+.option-btn.dimmed {
+    opacity: 0.55;
+}
+
+.option-btn.correct .option-letter,
+.option-btn.incorrect .option-letter {
+    background: white;
+}
+
+.feedback {
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-size: 1rem;
+    line-height: 1.55;
+    border-left: 6px solid;
+    animation: slideFadeIn 0.4s ease-out forwards;
+}
+
+.feedback-ok {
+    background: #f0fdf4;
+    border-color: #16a34a;
+    color: #14532d;
+}
+
+.feedback-bad {
+    background: #fef2f2;
+    border-color: #dc2626;
+    color: #7f1d1d;
+}
+
+.next-btn {
+    align-self: center;
+    margin-top: 5px;
+}
+
 /* =========================================
    TELA 3: RESULTADO
    ========================================= */
@@ -379,4 +430,5 @@ body {
     .result-container { padding: 40px 20px; }
     .result-buttons { flex-direction: column; }
     .btn { width: 100%; }
+    .feedback { font-size: 0.92rem; padding: 14px 16px; }
 }
