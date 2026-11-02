@@ -1,5 +1,5 @@
 /**
- * Banco de Questões (30 perguntas no total)
+ * Banco de Questões (45 perguntas no total: 15 por categoria; a cada tentativa são sorteadas 10)
  * Cada questão tem enunciado, 4 alternativas, o índice da correta
  * e uma explicação mostrada ao usuário depois de responder.
  */
@@ -114,6 +114,61 @@ const questions = {
             ],
             correct: 1,
             explanation: "Garrafas, talheres e outros itens de uso pessoal podem transmitir vírus e bactérias pela saliva e pelo contato direto."
+        },
+        {
+            question: "Antes de uma atividade intensa na quadra, o que ajuda a prevenir lesões musculares?",
+            options: [
+                "Aquecer e alongar o corpo",
+                "Começar direto no ritmo máximo para aquecer rápido",
+                "Ficar parado até o professor chamar",
+                "Fazer só um alongamento do pescoço"
+            ],
+            correct: 0,
+            explanation: "Aquecer e alongar prepara músculos e articulações e reduz o risco de distensões e outras lesões. Começar direto em ritmo máximo aumenta esse risco."
+        },
+        {
+            question: "O que você deve fazer ao ver uma tomada quebrada ou um fio desencapado na sala de aula?",
+            options: [
+                "Tentar consertar com fita adesiva",
+                "Avisar o professor ou a direção e não encostar",
+                "Cobrir com um papel e continuar usando a sala",
+                "Encostar só para ver se ainda funciona"
+            ],
+            correct: 1,
+            explanation: "Fios expostos e tomadas quebradas podem causar choque elétrico e incêndio. O correto é não encostar e avisar um adulto responsável para providenciar o reparo."
+        },
+        {
+            question: "Por que é perigoso conversar, rir ou correr enquanto se come o lanche?",
+            options: [
+                "Porque a comida esfria mais rápido",
+                "Porque pode causar engasgo",
+                "Porque gasta a energia do lanche",
+                "Porque a comida suja o uniforme"
+            ],
+            correct: 1,
+            explanation: "Falar, rir ou correr com comida na boca aumenta o risco de engasgo, que pode obstruir a respiração. Coma sentado e com calma."
+        },
+        {
+            question: "Qual cuidado é importante ao brincar no pátio em dias de sol forte?",
+            options: [
+                "Evitar beber água para não ter que ir ao banheiro",
+                "Hidratar-se e procurar sombra nos intervalos",
+                "Brincar o tempo todo no ponto mais quente do pátio",
+                "Usar roupas bem escuras e fechadas, sem beber água"
+            ],
+            correct: 1,
+            explanation: "Em dias quentes é preciso beber água com frequência e descansar na sombra para evitar desidratação e insolação. Protetor solar e boné também ajudam."
+        },
+        {
+            question: "Qual é a forma mais segura de passar uma tesoura para um colega?",
+            options: [
+                "Jogando de longe, com cuidado",
+                "Com a ponta voltada para ele, para que pegue pelo cabo",
+                "Segurando pela lâmina, com o cabo voltado para ele",
+                "Deixando-a aberta sobre a mesa para ele pegar"
+            ],
+            correct: 2,
+            explanation: "Entregue a tesoura fechada, segurando pela parte da lâmina e oferecendo o cabo ao colega. Assim a ponta fica longe das mãos e do rosto dele."
         }
     ],
     fabrica: [
@@ -226,6 +281,61 @@ const questions = {
             ],
             correct: 1,
             explanation: "Ambiente confinado é um espaço não projetado para ocupação humana contínua e com ventilação deficiente, o que pode causar falta de oxigênio ou acúmulo de gases. A entrada exige procedimentos específicos."
+        },
+        {
+            question: "Qual proteção é indispensável para os olhos e o rosto durante a soldagem?",
+            options: [
+                "Óculos de sol comuns",
+                "Máscara de solda com lente de filtro adequado",
+                "Óculos de grau",
+                "Viseira de acrílico transparente"
+            ],
+            correct: 1,
+            explanation: "A soldagem emite radiação intensa e faíscas. É necessária máscara de solda com lente de filtro adequado: óculos comuns ou viseira transparente não protegem contra esse brilho."
+        },
+        {
+            question: "Qual agente NÃO deve ser usado para apagar um incêndio em equipamento elétrico energizado?",
+            options: [
+                "Água",
+                "Extintor de CO2",
+                "Extintor de pó químico",
+                "Cobertor abafador seco, sem tocar nos fios"
+            ],
+            correct: 0,
+            explanation: "A água conduz eletricidade e pode causar choque em quem combate o fogo. Em equipamento energizado usa-se extintor adequado, como CO2 ou pó químico, e, se possível, desliga-se a energia."
+        },
+        {
+            question: "Por que as proteções (guardas) das máquinas não devem ser retiradas pelo operador?",
+            options: [
+                "Porque deixam a máquina mais lenta",
+                "Porque impedem o contato com partes móveis e evitam acidentes",
+                "Porque servem só para manter a máquina limpa",
+                "Porque a retirada só é proibida em máquinas novas"
+            ],
+            correct: 1,
+            explanation: "As proteções impedem que mãos, roupas e cabelos alcancem engrenagens, correias e lâminas. Retirá-las expõe o operador ao risco de amputações e outros acidentes graves."
+        },
+        {
+            question: "Segundo a NR-35, a partir de qual altura o trabalho é considerado 'trabalho em altura'?",
+            options: [
+                "Acima de 2 metros do nível inferior, com risco de queda",
+                "Acima de 5 metros",
+                "Acima de 10 metros",
+                "Somente acima de 20 metros"
+            ],
+            correct: 0,
+            explanation: "A NR-35 considera trabalho em altura toda atividade acima de 2 metros do nível inferior em que haja risco de queda, exigindo treinamento, planejamento e proteção contra queda."
+        },
+        {
+            question: "Por que anéis, pulseiras e cabelos soltos são proibidos perto de máquinas com partes giratórias?",
+            options: [
+                "Por uma questão apenas de aparência",
+                "Porque podem ser enroscados e arrastar a pessoa para a máquina",
+                "Porque atrapalham o uso do celular",
+                "Porque só atrapalham o uso do crachá"
+            ],
+            correct: 1,
+            explanation: "Peças giratórias podem prender adornos, roupas largas e cabelos soltos e puxar a mão ou o corpo para dentro da máquina. Por isso devem ser retirados ou presos."
         }
     ],
     empresa: [
@@ -338,6 +448,61 @@ const questions = {
             ],
             correct: 1,
             explanation: "Impressoras a laser e copiadoras podem emitir partículas de toner e ozônio, que irritam as vias respiratórias em ambientes mal ventilados."
+        },
+        {
+            question: "Qual hábito ajuda a proteger a saúde de quem passa muitas horas sentado no escritório?",
+            options: [
+                "Ficar na mesma posição para não perder o foco",
+                "Fazer pausas curtas para levantar, andar e alongar",
+                "Trabalhar sem pausas para terminar mais cedo",
+                "Apoiar o corpo só em um lado da cadeira"
+            ],
+            correct: 1,
+            explanation: "Pausas curtas para levantar e alongar aliviam a tensão muscular e a pressão na coluna e na circulação, ajudando a prevenir dores e lesões por esforço."
+        },
+        {
+            question: "Qual é o cuidado correto com saídas de emergência e corredores de circulação?",
+            options: [
+                "Usá-los como depósito temporário de caixas",
+                "Mantê-los sempre livres e desobstruídos",
+                "Trancá-los para evitar entradas indevidas",
+                "Deixar objetos leves encostados, desde que sobre algum espaço"
+            ],
+            correct: 1,
+            explanation: "Em uma emergência, qualquer obstáculo nas rotas de fuga atrasa a saída das pessoas e pode causar tropeços e aglomeração. Elas devem ficar sempre livres e sinalizadas."
+        },
+        {
+            question: "Por que é perigoso ligar muitos aparelhos em uma mesma extensão ou benjamim?",
+            options: [
+                "Porque os aparelhos duram menos",
+                "Porque pode sobrecarregar a rede elétrica e causar superaquecimento e incêndio",
+                "Porque deixa a internet mais lenta",
+                "Porque só atrapalha o uso da tomada ao lado"
+            ],
+            correct: 1,
+            explanation: "Ligar muitos aparelhos em um mesmo ponto pode ultrapassar a capacidade do circuito, aquecer fios e conexões e iniciar um incêndio."
+        },
+        {
+            question: "Por que não se deve abrir mais de uma gaveta do arquivo ao mesmo tempo?",
+            options: [
+                "Porque o arquivo pode tombar",
+                "Porque os documentos se misturam",
+                "Porque a chave pode quebrar",
+                "Porque a gaveta de baixo trava"
+            ],
+            correct: 0,
+            explanation: "Com várias gavetas abertas, o peso se desloca para a frente e o arquivo pode tombar, causando acidentes graves. Abra uma gaveta por vez e feche-a em seguida."
+        },
+        {
+            question: "O que fazer quando precisar alcançar um objeto em uma prateleira alta?",
+            options: [
+                "Subir em uma cadeira giratória",
+                "Usar uma escada ou banqueta apropriada e estável",
+                "Ficar na ponta dos pés, esticando o corpo",
+                "Pedir para um colega segurar a cadeira, que dá para alcançar"
+            ],
+            correct: 1,
+            explanation: "Cadeiras giratórias se movem e viram, causando quedas. Use sempre escada ou banqueta apropriada, estável e em bom estado."
         }
     ]
 };
@@ -365,6 +530,19 @@ let currentCategory = '';
 let currentQuestionIndex = 0;
 let score = 0;
 let selectedQuestions = [];
+const QUESTOES_POR_PARTIDA = 10;
+
+/**
+ * Embaralha uma lista (Fisher-Yates) sem alterar a original
+ */
+function shuffle(list) {
+    const a = [...list];
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
 
 /**
  * Função para alternar entre as telas
@@ -381,7 +559,17 @@ function showScreen(screenId) {
  */
 function startQuiz(category) {
     currentCategory = category;
-    selectedQuestions = [...questions[category]];
+    // Embaralha a ordem das perguntas e das alternativas a cada tentativa
+    selectedQuestions = shuffle(questions[category]).slice(0, QUESTOES_POR_PARTIDA).map(q => {
+        const opts = q.options.map((text, i) => ({ text, isCorrect: i === q.correct }));
+        const mixed = shuffle(opts);
+        return {
+            question: q.question,
+            options: mixed.map(o => o.text),
+            correct: mixed.findIndex(o => o.isCorrect),
+            explanation: q.explanation
+        };
+    });
     currentQuestionIndex = 0;
     score = 0;
     
